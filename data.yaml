@@ -1,4 +1,4 @@
-path: /content/GAIIC2024-赛道1-目标检测任务/  # dataset root dir
+path: /kaggle/working/GAIIC2024-赛道1-目标检测任务/  # dataset root dir
 train: train/tir/  # train images 
 val: val/tir/  # val images
 test: test/tir/ # test images
