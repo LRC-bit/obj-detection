@@ -1,0 +1,13 @@
+path: /content/GAIIC2024-赛道1-目标检测任务/  # dataset root dir
+train: train/tir/  # train images 
+val: val/tir/  # val images
+test: test/tir/ # test images
+ 
+# Classes
+names:
+  1: car
+  2: truck
+  3: bus
+  4: van
+  5: freight_car
+
