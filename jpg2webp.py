@@ -3,9 +3,9 @@ import os
 from multiprocessing import Pool
 
 def process_image_train(i, file_name):
-    rgb_path = f"/kaggle/working/GAIIC2024-赛道1-目标检测任务/{file_name}/rgb/{str(i).rjust(5, "0")}.jpg"
-    gray_path = f"/kaggle/working/GAIIC2024-赛道1-目标检测任务/{file_name}/tir/{str(i).rjust(5, "0")}.jpg"
-    output_path = f"kaggle/working/dataset/{file_name}/{str(i).rjust(5, "0")}.webp"
+    rgb_path = "/kaggle/working/GAIIC2024-赛道1-目标检测任务/" + file_name + "/rgb/" + str(i).rjust(5, "0") + ".jpg"
+    gray_path = "/kaggle/working/GAIIC2024-赛道1-目标检测任务/" + file_name + "/tir/" + str(i).rjust(5, "0") + ".jpg"
+    output_path = "kaggle/working/dataset/" + file_name + "/" + str(i).rjust(5, "0") + ".webp"
     # 直接创建一个与RGB图像相同大小的RGBA图像，并将灰度图作为Alpha通道
     img_combined = Image.merge("RGBA", (*Image.open(rgb_path).split(), Image.open(gray_path).convert("L")))
 
