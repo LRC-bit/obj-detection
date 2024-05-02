@@ -14,6 +14,6 @@ def process_image_train(i, file_name):
 
 if __name__ == "__main__":
     for file_name in [("train",17991), ("val",1470), ("test",1001)]:
-        os.makedirs(f"kaggle/working/dataset/{file_name[0]}")
+        os.makedirs(f"dataset/{file_name[0]}")
         with Pool(processes=8) as pool:  # 假设使用8个进程
             pool.starmap(process_image_train, [(i, file_name[0]) for i in range(1, file_name[1])])
