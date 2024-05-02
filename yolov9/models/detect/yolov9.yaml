@@ -9,7 +9,7 @@ width_multiple: 1.0  # layer channel multiple
 
 # anchors
 anchors: 3
-
+ch: 4
 # YOLOv9 backbone
 backbone:
   [
