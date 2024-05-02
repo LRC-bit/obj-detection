@@ -37,6 +37,6 @@ def convert_coco_to_yolo(coco_json_path, output_dir):
 
 # 使用函数进行转换
 coco_json_path = '/kaggle/working/GAIIC2024-赛道1-目标检测任务/val/val.json'  # 替换为实际COCO标注文件路径
-output_dir = '/kaggle/working/GAIIC2024-赛道1-目标检测任务/val/tir'  # 替换为期望的输出目录
+output_dir = 'kaggle/working/dataset/val'  # 替换为期望的输出目录
 
 convert_coco_to_yolo(coco_json_path, output_dir)
