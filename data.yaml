@@ -1,7 +1,7 @@
-path: /kaggle/working/GAIIC2024-赛道1-目标检测任务/  # dataset root dir
-train: train/tir/  # train images 
-val: val/tir/  # val images
-test: test/tir/ # test images
+path: /kaggle/working/dataset/  # dataset root dir
+train: train/  # train images 
+val: val/  # val images
+test: test/ # test images
  
 # Classes
 names:
