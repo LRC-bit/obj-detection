@@ -691,7 +691,7 @@ class LoadImagesAndLabels(Dataset):
 
             rgb_img = img[:, :, :3]  # 索引操作
             a_img = img[:, :, 3]
-            rgb_img, labels = self.albumentations(rgb_img, labels)
+            rgb_img, _ = self.albumentations(rgb_img, labels)
             a_img, labels = self.albumentations(a_img, labels)
 
             nl = len(labels)  # update after albumentations
