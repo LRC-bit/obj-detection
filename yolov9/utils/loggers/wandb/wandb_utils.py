@@ -18,12 +18,14 @@ if str(ROOT) not in sys.path:
 from utils.dataloaders import LoadImagesAndLabels, img2label_paths
 from utils.general import LOGGER, check_dataset, check_file
 
-try:
-    import wandb
+#try:
+#    import wandb
 
-    assert hasattr(wandb, '__version__')  # verify package import not local dir
-except (ImportError, AssertionError):
-    wandb = None
+#    assert hasattr(wandb, '__version__')  # verify package import not local dir
+#except (ImportError, AssertionError):
+#    wandb = None
+
+wandb = None
 
 RANK = int(os.getenv('RANK', -1))
 WANDB_ARTIFACT_PREFIX = 'wandb-artifact://'
