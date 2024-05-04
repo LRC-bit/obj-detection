@@ -5,9 +5,9 @@ test: test/ # test images
  
 # Classes
 names:
-  1: car
-  2: truck
-  3: bus
-  4: van
-  5: freight_car
+  0: car
+  1: truck
+  2: bus
+  3: van
+  4: freight_car
 

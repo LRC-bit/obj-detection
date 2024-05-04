@@ -82,7 +82,7 @@ def run(
     vid_path, vid_writer = [None] * bs, [None] * bs
 
     # Run inference
-    model.warmup(imgsz=(1 if pt or model.triton else bs, 3, *imgsz))  # warmup
+    model.warmup(imgsz=(1 if pt or model.triton else bs, 4, *imgsz))  # warmup
     seen, windows, dt = 0, [], (Profile(), Profile(), Profile())
     for path, im, im0s, vid_cap, s in dataset:
         with dt[0]:
