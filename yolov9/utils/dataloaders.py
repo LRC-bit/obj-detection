@@ -689,16 +689,12 @@ class LoadImagesAndLabels(Dataset):
         if self.augment:
             # Albumentations
 
-            rgb_img = img[:, :, :3]  # 索引操作
-            a_img = img[:, :, 3]
-            rgb_img, _ = self.albumentations(rgb_img, labels)
-            a_img, labels = self.albumentations(a_img, labels)
+            img, labels = self.albumentations(img, labels)
 
             nl = len(labels)  # update after albumentations
 
             # HSV color-space
-            augment_hsv(rgb_img, hgain=hyp['hsv_h'], sgain=hyp['hsv_s'], vgain=hyp['hsv_v'])
-            img = np.dstack((rgb_img, a_img))
+            #augment_hsv(img, hgain=hyp['hsv_h'], sgain=hyp['hsv_s'], vgain=hyp['hsv_v'])
 
             # Flip up-down
             if random.random() < hyp['flipud']:
