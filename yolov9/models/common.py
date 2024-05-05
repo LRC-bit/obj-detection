@@ -838,8 +838,8 @@ class DetectMultiBackend(nn.Module):
         if 'names' not in locals():
             names = yaml_load(data)['names'] if data else {i: f'class{i}' for i in range(999)}
 
-        if names[0] == 'n01440764' and len(names) == 1000:  # ImageNet
-            names = yaml_load(ROOT / 'data/ImageNet.yaml')['names']  # human-readable names
+        #if names[0] == 'n01440764' and len(names) == 1000:  # ImageNet
+            #names = yaml_load(ROOT / 'data/ImageNet.yaml')['names']  # human-readable names
 
         self.__dict__.update(locals())  # assign all variables to self
 
